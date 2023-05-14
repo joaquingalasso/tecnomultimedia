@@ -207,6 +207,13 @@ void draw() {
     }
   } else if (pantalla.equals("septima")) {
     image(diapo7, 0, 0, 640, 480);
+
+    fill(255, 0, 0, 180);
+    rect(0, 20, width, height/14);
+    fill(255);
+    textSize(tamParrafo-5);
+    text("NIVEL DIFÍCIL", width/2, 33);
+
     textAlign(CENTER, CENTER);
     fill(255, opacidad3);
     opacidad3++;
