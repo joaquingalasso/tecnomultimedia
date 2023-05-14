@@ -274,9 +274,9 @@ void mousePressed() {
     px3=0;
     px4=0;
     py= -40;
-    contador=0;
-    contador2=0;
-    contador3=0;
+    contador=5;
+    contador2=5;
+    contador3=5;
     opacidad=0;
     opacidad2=0;
     opacidad3=0;
