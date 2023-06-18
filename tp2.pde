@@ -65,7 +65,6 @@ color colorAleatorio(float valor) {
 
 void keyPressed() {
 
-  // Use an if-else statement to check which key is pressed
   if (key == 'd') {
     velocidad++;
     reiniciar();
