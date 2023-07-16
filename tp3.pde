@@ -197,7 +197,7 @@ void mostrarBotones() {
   }
 }
 
-// función que dibuja un botón en una posición x, con un texto t usando la función rect y la función text:
+// Función que dibuja un botón en una posición x, con un texto t usando la función rect y la función text:
 void dibujarBoton(float x, float y, float w, String t, boolean b) {
   if (b == true) {
     fill(255); // color de relleno a blanco
