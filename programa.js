@@ -74,9 +74,9 @@ function draw() {
                     combustibleX[i] = random(diametroEnemigo, width - diametroEnemigo);
                 }
 
-            } else if (mouseIsPressed && mouseX > width / 2 - 150 && mouseX < width / 2 + 150 && mouseY > height / 2 + 30 && mouseY < height / 2 + 80) {
+            } else if (mouseIsPressed && mouseX > width / 2 - 150 && mouseX < width / 2 + 150 && mouseY > height / 2 + 30 && mouseY < height / 2 + 70) {
                 estado = "instrucciones";
-            } else if (mouseIsPressed && mouseX > width / 2 - 150 && mouseX < width / 2 + 150 && mouseY > height / 2 + 80 && mouseY < height / 2 + 130) {
+            } else if (mouseIsPressed && mouseX > width / 2 - 150 && mouseX < width / 2 + 150 && mouseY > height / 2 + 90 && mouseY < height / 2 + 130) {
                 estado = "creditos";
             }
 
@@ -142,10 +142,10 @@ function draw() {
             text("Instrucciones:", width / 2, height / 2 - 100);
             text("Mové la nave con el mouse", width / 2, height / 2 - 50);
             text("Dispará con el botón izquierdo del mouse", width / 2, height / 2);
-            text("Destruí a los enemigos antes de \n que lleguen al fondo de la pantalla", width / 2, height / 2 + 50);
-            text("Hacé clic para volver al menú principal", width / 2, height / 2 + 150);
+            text("Destruí a los enemigos antes de \n que lleguen al fondo de la pantalla. \n No dejes que el tiempo se acabe \n ¡Agarrá el combustible!", width / 2, height / 2 + 50);
+            text("Hacé clic para volver al menú principal", width / 2, height / 2 + 175);
 
-            if (mouseIsPressed) {
+            if (mouseIsPressed && frameCount % 60 == 1) {
                 estado = "menu";
             }
 
@@ -159,7 +159,7 @@ function draw() {
             text("Desarrollado por: Joaquín Galasso", width / 2, height / 2 - 50);
             text("Hacé clic para volver al menú principal", width / 2, height / 2 + 150);
 
-            if (mouseIsPressed) {
+            if (mouseIsPressed && frameCount % 60 == 1) {
                 estado = "menu";
             }
 
