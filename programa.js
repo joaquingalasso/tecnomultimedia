@@ -100,8 +100,11 @@ function draw() {
             moverEnemigos();
             moverCombustible();
             dibujarNave();
+            verificarCombustible();
 
-            
+            if (frameCount % 60 == 0 && contador > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
+                contador --;
+              }
 
             if (disparo) {
                 verificarDisparo();
@@ -210,7 +213,7 @@ function verificarCombustible() {
         if (combustibleX[i] <= mouseX + 12.5 && combustibleX[i] >= mouseX - 12.5) {
             combustibleX[i] = random(diametroEnemigo, width - diametroEnemigo);
             combustibleY[i] = 0;
-            tiempo+=2;
+            contador+=2;
             velocidad*=1.2;
         }
     }
@@ -240,7 +243,7 @@ function mousePressed() {
 }
 
 function verificarFin() {
-    // Verifica si alguno de los Aliens pasó la nave
+    // Verifica si alguno de los enemigos pasó la nave
     for (var i = 0; i < 5; i++) {
         if (enemigoY[i] > 600 || contador == 0) {
             fin = true;
