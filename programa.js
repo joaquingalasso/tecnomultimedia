@@ -3,6 +3,8 @@
  Galasso Joaquín - N° legajo 94698/3
  tp4 comisión 1 - Intento de River Raid.
  
+ URL del video: https://youtu.be/XShBaXqdXJk
+
  */
 
 /* Array de rectangulos que finalmente no se utilizó.
@@ -126,6 +128,7 @@ function draw() {
                     combustibleY = [0];
                     puntaje = 0;
                     contador = 10;
+                    velocidad = 1;
                     fin = false;
                     estado = "menu";
 
@@ -211,7 +214,7 @@ function detectarColision(rect1, rect2) {
 function verificarCombustible() {
 
     for (var i = 0; i < 1; i++) {
-        if (combustibleX[i] <= mouseX + 12.5 && combustibleX[i] >= mouseX - 12.5 && combustibleY[i]>=500) {
+        if (combustibleX[i] <= mouseX + 12.5 && combustibleX[i] >= mouseX - 12.5 && combustibleY[i] >= 500) {
             combustibleX[i] = random(diametroEnemigo, width - diametroEnemigo);
             combustibleY[i] = 0;
             contador += 4;
