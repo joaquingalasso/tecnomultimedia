@@ -29,7 +29,7 @@ let combustibleX = [0];
 let combustibleY = [0];
 
 // Otras variables
-let diametroEnemigo = 25, velocidad = 1, puntaje = 0, contador = 0;
+let diametroEnemigo = 25, velocidad = 1, puntaje = 0, contador = 10;
 let fin = false, disparo = false;
 let menu = true;
 let instrucciones = false;
@@ -101,6 +101,8 @@ function draw() {
             moverCombustible();
             dibujarNave();
 
+            
+
             if (disparo) {
                 verificarDisparo();
             }
@@ -136,7 +138,7 @@ function draw() {
             text("Instrucciones:", width / 2, height / 2 - 100);
             text("Mové la nave con el mouse", width / 2, height / 2 - 50);
             text("Dispará con el botón izquierdo del mouse", width / 2, height / 2);
-            text("Destruí a los enemigos antes de que lleguen al fondo de la pantalla", width / 2, height / 2 + 50);
+            text("Destruí a los enemigos antes de \n que lleguen al fondo de la pantalla", width / 2, height / 2 + 50);
             text("Hacé clic para volver al menú principal", width / 2, height / 2 + 150);
 
             if (mouseIsPressed) {
@@ -150,7 +152,7 @@ function draw() {
             textAlign(CENTER);
             fill(255);
             text("Créditos:", width / 2, height / 2 - 100);
-            text("Desarrollado por: [Tu nombre aquí]", width / 2, height / 2 - 50);
+            text("Desarrollado por: Joaquín Galasso", width / 2, height / 2 - 50);
             text("Haz clic para volver al menú principal", width / 2, height / 2 + 150);
 
             if (mouseIsPressed) {
@@ -204,7 +206,7 @@ function detectarColision(rect1, rect2) {
 
 function verificarCombustible() {
 
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 0; i++) {
         if (combustibleX[i] <= mouseX + 12.5 && combustibleX[i] >= mouseX - 12.5) {
             combustibleX[i] = random(diametroEnemigo, width - diametroEnemigo);
             combustibleY[i] = 0;
@@ -240,7 +242,7 @@ function mousePressed() {
 function verificarFin() {
     // Verifica si alguno de los Aliens pasó la nave
     for (var i = 0; i < 5; i++) {
-        if (enemigoY[i] > 600 ) {
+        if (enemigoY[i] > 600 || contador == 0) {
             fin = true;
         }
     }
