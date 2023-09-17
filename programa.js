@@ -238,7 +238,7 @@ function detectarColision(rect1, rect2) {
 function verificarCombustible() {
 
     for (var i = 0; i < 1; i++) {
-        if (combustibleX[i] <= mouseX + 12.5 && combustibleX[i] >= mouseX - 12.5 && combustibleY[i] >= 450) {
+        if (combustibleX[i] <= mouseX + 30 && combustibleX[i] >= mouseX - 30 && combustibleY[i] >= 500) {
             combustibleX[i] = random(diametroEnemigo, width - diametroEnemigo);
             combustibleY[i] = 0;
             contador += 4;
