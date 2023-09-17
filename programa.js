@@ -57,7 +57,6 @@ function draw() {
     switch (estado) {
         case "menu":
             background(0);
-            image(fondo[1], 0, movFondo);
             textAlign(CENTER);
             fill(255);
             text("¡Bienvenido!", width / 2, height / 2 - 100);
@@ -103,8 +102,8 @@ function draw() {
             verificarCombustible();
 
             if (frameCount % 60 == 0 && contador > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
-                contador --;
-              }
+                contador--;
+            }
 
             if (disparo) {
                 verificarDisparo();
@@ -116,7 +115,7 @@ function draw() {
                 background(0);
                 fill(255, 0, 0);
                 text("Juego terminado", width / 2, height / 2);
-                text("Haz clic para reiniciar", width / 2, height / 2 + 50);
+                text("Hacé clic para reiniciar", width / 2, height / 2 + 50);
                 text("Puntaje: " + puntaje, width / 2, height / 2 + 100);
 
                 if (mouseIsPressed) {
@@ -124,7 +123,9 @@ function draw() {
                         enemigoX[i] = random(diametroEnemigo, width - diametroEnemigo);
                     }
                     enemigoY = [0, 0, 0, 0, 0];
+                    combustibleY = [0];
                     puntaje = 0;
+                    contador = 10;
                     fin = false;
                     estado = "menu";
 
@@ -156,7 +157,7 @@ function draw() {
             fill(255);
             text("Créditos:", width / 2, height / 2 - 100);
             text("Desarrollado por: Joaquín Galasso", width / 2, height / 2 - 50);
-            text("Haz clic para volver al menú principal", width / 2, height / 2 + 150);
+            text("Hacé clic para volver al menú principal", width / 2, height / 2 + 150);
 
             if (mouseIsPressed) {
                 estado = "menu";
@@ -188,7 +189,7 @@ function dibujarCombustible() {
 
 function moverCombustible() {
     for (var i = 0; i < 5; i++) {
-        combustibleY[i] += velocidad*1.5;
+        combustibleY[i] += velocidad * 1.5;
     }
 }
 function dibujarNave() {
@@ -209,15 +210,15 @@ function detectarColision(rect1, rect2) {
 
 function verificarCombustible() {
 
-    for (var i = 0; i < 0; i++) {
-        if (combustibleX[i] <= mouseX + 12.5 && combustibleX[i] >= mouseX - 12.5) {
+    for (var i = 0; i < 1; i++) {
+        if (combustibleX[i] <= mouseX + 12.5 && combustibleX[i] >= mouseX - 12.5 && combustibleY[i]>=500) {
             combustibleX[i] = random(diametroEnemigo, width - diametroEnemigo);
             combustibleY[i] = 0;
-            contador+=2;
-            velocidad*=1.2;
+            contador += 4;
+            velocidad *= 1.5;
         }
     }
-    strokeWeight(1);
+    strokeWeight(0);
 }
 
 function verificarDisparo() {
