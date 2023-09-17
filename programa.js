@@ -40,7 +40,7 @@ let estado = "menu";
 
 let fondo = [];
 let movFondo = -600;
-let cantFondo = 3;
+let cantFondo = 1;
 let numFondo = 0;
 
 function preload() {
