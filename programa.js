@@ -32,7 +32,7 @@ let combustibleY = [0];
 
 // Otras variables
 let diametroEnemigo = 25, velocidad = 1, puntaje = 0, contador = 10;
-let fin = false, disparo = false;
+let fin = false, victoria = false; disparo = false;
 let menu = true;
 let instrucciones = false;
 let creditos = false;
@@ -112,15 +112,16 @@ function draw() {
             }
 
             verificarFin();
+            verificarVictoria();
 
             if (fin) {
                 background(0);
                 fill(255, 0, 0);
-                text("Juego terminado", width / 2, height / 2);
-                text("Hacé clic para reiniciar", width / 2, height / 2 + 50);
+                text("Game over", width / 2, height / 2);
+                text("Apretá Enter para reiniciar", width / 2, height / 2 + 50);
                 text("Puntaje: " + puntaje, width / 2, height / 2 + 100);
 
-                if (mouseIsPressed) {
+                if (keyIsPressed && keyCode === ENTER) {
                     for (var i = 0; i < 5; i++) {
                         enemigoX[i] = random(diametroEnemigo, width - diametroEnemigo);
                     }
@@ -130,7 +131,30 @@ function draw() {
                     contador = 10;
                     velocidad = 1;
                     fin = false;
-                    estado = "menu";
+                    estado = "juego";
+
+                }
+
+            }
+
+            if (victoria) {
+                background(0);
+                fill(255, 0, 0);
+                text("¡Ganaste!", width / 2, height / 2);
+                text("Apretá Enter para reiniciar", width / 2, height / 2 + 50);
+                text("Puntaje: " + puntaje, width / 2, height / 2 + 100);
+
+                if (keyIsPressed && keyCode === ENTER) {
+                    for (var i = 0; i < 5; i++) {
+                        enemigoX[i] = random(diametroEnemigo, width - diametroEnemigo);
+                    }
+                    enemigoY = [0, 0, 0, 0, 0];
+                    combustibleY = [0];
+                    puntaje = 0;
+                    contador = 10;
+                    velocidad = 1;
+                    victoria = false;
+                    estado = "juego";
 
                 }
 
@@ -145,7 +169,7 @@ function draw() {
             text("Instrucciones:", width / 2, height / 2 - 100);
             text("Mové la nave con el mouse", width / 2, height / 2 - 50);
             text("Dispará con el botón izquierdo del mouse", width / 2, height / 2);
-            text("Destruí a los enemigos antes de \n que lleguen al fondo de la pantalla. \n No dejes que el tiempo se acabe \n ¡Agarrá el combustible!", width / 2, height / 2 + 50);
+            text("Destruí a los enemigos antes de \n que lleguen al fondo de la pantalla. \n Lográ 50 puntos para ganar. \n ¡Agarrá el combustible para ganar tiempo!", width / 2, height / 2 + 50);
             text("Hacé clic para volver al menú principal", width / 2, height / 2 + 175);
 
             if (mouseIsPressed && frameCount % 60 == 1) {
@@ -192,7 +216,7 @@ function dibujarCombustible() {
 
 function moverCombustible() {
     for (var i = 0; i < 5; i++) {
-        combustibleY[i] += velocidad * 1.5;
+        combustibleY[i] += velocidad * 1.2;
     }
 }
 function dibujarNave() {
@@ -253,4 +277,11 @@ function verificarFin() {
             fin = true;
         }
     }
+}
+
+function verificarVictoria() {
+    // Verifica si se llegó a los 50 puntos.
+        if (puntaje >= 50) {
+            victoria = true;
+        }
 }
