@@ -3,7 +3,7 @@
  Galasso Joaquín - N° legajo 94698/3
  tp4 comisión 1 - Intento de River Raid.
  
- URL del video: https://youtu.be/XShBaXqdXJk
+ URL del video: https://youtu.be/Jl5tOj8MstE
 
  */
 
@@ -172,7 +172,7 @@ function draw() {
             text("Destruí a los enemigos antes de \n que lleguen al fondo de la pantalla. \n Lográ 50 puntos para ganar. \n ¡Agarrá el combustible para ganar tiempo!", width / 2, height / 2 + 50);
             text("Hacé clic para volver al menú principal", width / 2, height / 2 + 175);
 
-            if (mouseIsPressed && frameCount % 60 == 1) {
+            if (mouseIsPressed) {
                 estado = "menu";
             }
 
@@ -186,7 +186,7 @@ function draw() {
             text("Desarrollado por: Joaquín Galasso", width / 2, height / 2 - 50);
             text("Hacé clic para volver al menú principal", width / 2, height / 2 + 150);
 
-            if (mouseIsPressed && frameCount % 60 == 1) {
+            if (mouseIsPressed) {
                 estado = "menu";
             }
 
@@ -238,7 +238,7 @@ function detectarColision(rect1, rect2) {
 function verificarCombustible() {
 
     for (var i = 0; i < 1; i++) {
-        if (combustibleX[i] <= mouseX + 12.5 && combustibleX[i] >= mouseX - 12.5 && combustibleY[i] >= 500) {
+        if (combustibleX[i] <= mouseX + 12.5 && combustibleX[i] >= mouseX - 12.5 && combustibleY[i] >= 450) {
             combustibleX[i] = random(diametroEnemigo, width - diametroEnemigo);
             combustibleY[i] = 0;
             contador += 4;
@@ -271,7 +271,7 @@ function mousePressed() {
 }
 
 function verificarFin() {
-    // Verifica si alguno de los enemigos pasó la nave
+    // Verifica si alguno de los enemigos pasó la nave o el contador llegó a cero
     for (var i = 0; i < 5; i++) {
         if (enemigoY[i] > 600 || contador == 0) {
             fin = true;
