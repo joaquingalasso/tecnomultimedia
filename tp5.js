@@ -3,7 +3,7 @@
  Galasso Joaquín - N° legajo 94698/3
  tp5 comisión 1 - Minijuego para "El Peatón", de Ray Bradbury.
  
- URL del video: https://youtu.be/
+ URL del video: https://youtu.be/-4XKLR_Z9jU
 
  */
 function setup() {
