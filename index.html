@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Sirena</title>
+
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <!-- tipografía Papyrus de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Papyrus&display=swap" rel="stylesheet">
+
+
+  <!-- CSS para los estilos de la pág -->
+  <style>
+    /* Aplicar Papyrus a todo el documento */
+    * {
+      font-family: 'Papyrus', fantasy;
+      text-align: center;
+    }
+
+    body {
+      background-image: linear-gradient(to right, #141e30, #243b55);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .canvas {
+      border: 2px solid rgb(0, 0, 0);
+    }
+
+    h1 {
+      font-size: 48px;
+      color: rgb(125,125,175);
+    }
+
+    h2 {
+      font-size: 32px;
+      color: rgb(90,60,90);
+    }
+
+    p {
+      font-size: 18px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>La Sirena</h1>
+    <h2>de Ray Bradbury</h2>
+    <p>Una aventura gráfica realizada por Julia Moirano y Joaquín Galasso, para Tecno 1.</p>
+    <br>
+    <div class="canvas"></div>
+    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="claseAventura.js"></script>
+    <script language="javascript" type="text/javascript" src="claseBoton.js"></script>
+    <script language="javascript" type="text/javascript" src="claseJuego.js"></script>
+    <script language="javascript" type="text/javascript" src="clasePersonaje.js"></script>
+    <script language="javascript" type="text/javascript" src="clasePiedras.js"></script>
+    <script language="javascript" type="text/javascript" src="claseTexto.js"></script>
+    <script language="javascript" type="text/javascript" src="tpfinal.js"></script>
+  </div>
+</body>
+
+</html>
