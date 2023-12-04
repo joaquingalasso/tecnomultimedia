@@ -104,17 +104,17 @@ class Aventura {
         //this.minijuego.presionar(keyCode);
         image(this.imagenes[11], 0, 0, width, height);
         this.bloquedetexto1.dibujarBloque(width / 5, 25, this.textobase[10]);
-        this.boton1.dibujar(500, 175, this.anchoboton + 50, this.altoboton, this.nombredeboton[2], 12, 13);
+        this.boton1.dibujar(660, 175, this.anchoboton + 50, this.altoboton, this.nombredeboton[2], 12, 13);
         break;
       case 13:
         image(this.imagenes[12], 0, 0, width, height);
         this.bloquedetexto1.dibujarBloque(width / 5, 425, this.textobase[11]);
-        this.boton1.dibujar(500, 425, this.anchoboton + 50, this.altoboton, this.nombredeboton[2], 13, 14);
+        this.boton1.dibujar(660, 425, this.anchoboton + 50, this.altoboton, this.nombredeboton[2], 13, 14);
         break;
       case 14:
         image(this.imagenes[13], 0, 0, width, height);
         this.bloquedetexto1.dibujarBloque(width / 5, 25, this.textobase[12]);
-        this.boton1.dibujar(500, 175, this.anchoboton + 50, this.altoboton, this.nombredeboton[2], 14, 15);
+        this.boton1.dibujar(660, 175, this.anchoboton + 50, this.altoboton, this.nombredeboton[2], 14, 15);
         break;
       case 15: /// FINAL 1
         image(this.imagenes[14], 0, 0, width, height);
