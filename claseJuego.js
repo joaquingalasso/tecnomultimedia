@@ -6,10 +6,7 @@ class Juego {
     for (let i = 0; i < this.cantidadtotal; i++) {
       this.imagenes[i] = loadImage("data/juego/imagen" + i + ".png");
     }
-    //this.boton3= new pulsador(650,500,200,50);
-    //this.boton4= new pulsador(675,300,300/2,50);
-    //this.boton5= new pulsador(650,550,250,50);
-    this.boton3 = new boton();
+    this.botonJuego = new boton();
     this.johnny1 = new personaje(50, 165, 100, 150);
     this.johnny2 = new personaje(750, 165, 100, 150);
     this.pied = [];
@@ -18,28 +15,17 @@ class Juego {
       this.pied[p].golpeado = true;
     }
     this.vidas = 8;
-
     this.victoria = false;
     this.derrota = false;
-
-    //this.aventura= new Aventura();
   }
 
   dibujar() {
-    //if(this.estado===0) {
-    //  image(this.imagenes[1],0,0);
-    //  image(this.imagenes[0],0,-100);
-    //  this.boton1.dibujarPulsador("COMENZAR",0,1);
-    //} else if(this.estado===1){
-    //    image(this.imagenes[2],0,0);
-    //    this.boton2.dibujarPulsador("SIGUIENTE",1,2);
-    /*//}else*/
     if (this.estado === 0) {
       image(this.imagenes[3], 0, 0);
       image(this.imagenes[2], 0, 0);
       image(this.imagenes[4], 0, 0);
       image(this.imagenes[1], 0, 0);
-      this.boton3.dibujar(650, 500, 200, 50, "¡VAMOS!", 0, 1);
+      this.botonJuego.dibujar(650, 500, 200, 50, "¡VAMOS!", 0, 1);
     } else if (this.estado === 1) {
       image(this.imagenes[3], 0, 0);
       image(this.imagenes[2], 0, 0);
@@ -104,18 +90,13 @@ class Juego {
       this.golpe();
       this.vivo();
       this.muerto();
-
     } else if (this.estado === 9) {
       this.gano();
-      // background(125,30,125);
     } else if (this.estado === 10) {
       image(this.imagenes[16], 0, 0);
-      this.boton3.dibujar(650, 550, 250, 50, "VOLVER AL INICIO", 10, 11);
+      this.botonJuego.dibujar(650, 550, 250, 50, "VOLVER AL INICIO", 10, 11);
     } else if (this.estado === 11) {
       this.derrota = true;
-    }
-    if (mouseIsPressed) {
-      this.clickear();
     }
   }
 
@@ -174,15 +155,15 @@ class Juego {
   }
 
   clickear() {
-    if (this.estado === this.boton3.pulpresente && this.boton3.apretar()) {
-      this.estado = this.boton3.pulsiguiente;
+    if (this.estado === this.botonJuego.pulpresente && this.botonJuego.apretar()) {
+      this.estado = this.botonJuego.pulsiguiente;
       this.reiniciarVariables();
     }
   }
 
   presionar(keyCode) {
     if (this.estado === 1 || this.estado === 3 || this.estado === 5 || this.estado === 7) {
-      if (keyCode === LEFT_ARROW) {
+      if (keyCode === LEFT_ARROW && this.johnny1.perx>0) {
         this.johnny1.moverIzquierda1();
       } else if (keyCode === RIGHT_ARROW) {
         this.johnny1.moverDerecha1();
@@ -194,7 +175,7 @@ class Juego {
     } else if (this.estado === 2 || this.estado === 4 || this.estado === 6 || this.estado === 8) {
       if (keyCode === LEFT_ARROW) {
         this.johnny2.moverIzquierda2();
-      } else if (keyCode === RIGHT_ARROW) {
+      } else if (keyCode === RIGHT_ARROW && this.johnny2.perx<width) {
         this.johnny2.moverDerecha2();
       }
       if (this.johnny2.perx < -50) {
