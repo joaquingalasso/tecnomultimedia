@@ -2,71 +2,125 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Meta tags requeridas -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>La Sirena</title>
 
+  <!-- librería de p5.js desde un CDN -->
   <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- archivo CSS personalizado -->
+  <link rel="stylesheet" href="estilos.css">
+
   <!-- tipografía Papyrus de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Papyrus&display=swap" rel="stylesheet">
 
-
-  <!-- CSS para los estilos de la pág -->
-  <style>
-    /* Aplicar Papyrus a todo el documento */
-    * {
-      font-family: 'Papyrus', fantasy;
-      text-align: center;
-    }
-
-    body {
-      background-image: linear-gradient(to right, #141e30, #243b55);
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .canvas {
-      border: 2px solid rgb(0, 0, 0);
-    }
-
-    h1 {
-      font-size: 48px;
-      color: rgb(125,125,175);
-    }
-
-    h2 {
-      font-size: 32px;
-      color: rgb(90,60,90);
-    }
-
-    p {
-      font-size: 18px;
-      color: white;
-    }
-  </style>
 </head>
 
-<body>
-  <div class="container">
+<!-- Crear un contenedor para el contenido del sitio web -->
+<div class="container">
+  <!-- Crear un encabezado con el título del sitio web y una barra de navegación con botones -->
+  <header class="py-3">
     <h1>La Sirena</h1>
     <h2>de Ray Bradbury</h2>
     <p>Una aventura gráfica realizada por Julia Moirano y Joaquín Galasso, para Tecno 1.</p>
-    <br>
-    <div class="canvas"></div>
-    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
-    <script language="javascript" type="text/javascript" src="claseAventura.js"></script>
-    <script language="javascript" type="text/javascript" src="claseBoton.js"></script>
-    <script language="javascript" type="text/javascript" src="claseJuego.js"></script>
-    <script language="javascript" type="text/javascript" src="clasePersonaje.js"></script>
-    <script language="javascript" type="text/javascript" src="clasePiedras.js"></script>
-    <script language="javascript" type="text/javascript" src="claseTexto.js"></script>
-    <script language="javascript" type="text/javascript" src="tpfinal.js"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Jugar ahora
+              </button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nuestro-proceso.html">Nuestro proceso</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Crear una sección principal con información sobre el juego -->
+  <main class="py-3">
+    <div class="column inline">
+      <div class="col-md-6">
+        <img src="sirena.jpg" alt="La Sirena" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2>¿De qué se trata el juego?</h2>
+        <p>El juego está basado en el relato "La Sirena" de Ray Bradbury, publicado en 1946. Es una historia sobre la
+          soledad y el paso del tiempo, donde una extraña criatura acude a un faro luego de oír su sirena. El juego te
+          invita a explorar el mundo de la sirena y a interactuar con ella y con el farero, mientras descubres los
+          secretos y las emociones que se esconden tras este encuentro.</p>
+        <p>El juego está hecho con p5.js, una biblioteca de JavaScript para la codificación creativa. El juego usa
+          gráficos, sonidos y animaciones para crear una experiencia inmersiva y artística. El juego tiene múltiples
+          finales posibles, dependiendo de las elecciones que hagas durante el juego.</p>
+        <p>¿Te animas a jugar? Haz clic en el botón "Jugar ahora" y sumérgete en el mundo de la sirena.</p>
+      </div>
+    </div>
+  </main>
+  <!-- Crear un pie de página con información de contacto -->
+  <footer class="py-3 bg-dark text-white">
+    <p class="text-center">Este sitio web fue creado por Joaco y Julia para el trabajo final de la materia Programación
+      Creativa.</p>
+    <p class="text-center">Puedes contactarnos por correo electrónico a joaco@gmail.com y julia@gmail.com.</p>
+  </footer>
+</div>
+
+<!-- Crear un modal para mostrar el juego de p5.js -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCentered"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Aventura gráfica: "La Sirena"</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body canvas">
+          <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+          <script language="javascript" type="text/javascript" src="claseAventura.js"></script>
+          <script language="javascript" type="text/javascript" src="claseBoton.js"></script>
+          <script language="javascript" type="text/javascript" src="claseJuego.js"></script>
+          <script language="javascript" type="text/javascript" src="clasePersonaje.js"></script>
+          <script language="javascript" type="text/javascript" src="clasePiedras.js"></script>
+          <script language="javascript" type="text/javascript" src="claseTexto.js"></script>
+          <script language="javascript" type="text/javascript" src="tpfinal.js"></script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
   </div>
+</div>
+
+<!-- JavaScript -->
+<script src="main.js"></script>
+<!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
