@@ -2,94 +2,155 @@
 
 /* Aplicar Papyrus a todo el documento */
 * {
-    font-family: 'Papyrus', fantasy;
-    text-align: center;
-    border-radius: 15px;
-  }
+  font-family: 'Papyrus', fantasy;
+  text-align: center;
+  border-radius: 15px;
+}
 
-  body {
-    background-image: linear-gradient(to right, #141e30, #243b55);
-  }
+body {
+ /* background-image: linear-gradient(to right, #141e30, #243b55); */
+ background-image: url("images/background.png");
+ background-repeat: repeat;
+ background-attachment: fixed;
+ background-position: center;
+}
 
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-  .canvas {
-    border: 2px solid rgb(0, 0, 0);
-    /* position:absolute;
+.canvas {
+  border: 2px solid rgb(0, 0, 0);
+  /* position:absolute;
     top:0;
     left:0;
     width:100%;
     height:100%;
     z-index:-1; */
-  }
+}
 
-  h1 {
-    font-size: 48px;
-    color: rgb(125,125,175);
-  }
-
-  h2 {
-    font-size: 32px;
-    color: rgb(90,60,90);
-  }
-
-  p {
-    font-size: 18px;
-    color: white;
-  }
-  
-
-  /* Estilo para el título del sitio web */
 h1 {
-    font-family: Papyrus;
-    font-size: 36px;
-    color: white;
-    text-align: center;
-  }
-  
-  /* Estilo para la barra de navegación */
-  .navbar {
-    background-color: #333333;
-  }
-  
-  /* Estilo para los enlaces de la barra de navegación */
-  .nav-link {
-    color: white;
-    font-weight: bold;
-  }
-  
-  /* Estilo para la sección principal */
-  main {
-    background-color: #cccccc;
-    padding: 20px;
-  }
-  
-  /* Estilo para el pie de página */
-  footer {
-    background-color: #333333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  /* Estilo para el modal del juego */
-  .modal-content {
-    background-color: #000000;
-    border: 5px solid white;
-  }
-  
-  /* Estilo para el título del modal */
-  .modal-title {
-    color: white;
-    font-family: Papyrus;
-    font-size: 24px;
-  }
-  
+  font-size: 48px;
+  color: rgb(125, 125, 175);
+}
+
+h2 {
+  font-size: 32px;
+  color: rgb(90, 60, 90);
+}
+
+p {
+  font-size: 18px;
+  color: rgb(134, 111, 134);
+}
+
+span {
+  font-size: 16px;
+}
+
+#subtitle {
+  font-size: 16px;
+  color: rgba(255,255,255,.75);
+}
+
+#thick {
+  font-weight: bold;
+  color: rgb(125, 125, 175);
+  cursor: pointer;
+}
+
+#thick:hover {
+  font-weight: bold;
+  color: rgb(90, 60, 90);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: rgb(125, 125, 175);
+  border-color: rgb(90, 60, 90);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  background-color: rgb(90, 60, 90);
+  border-color: rgb(125, 125, 175);
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+  background-color: #333333;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  background-image: url("images/pattern.png");
+}
+
+/* Estilo para los enlaces de la barra de navegación */
+.nav-link {
+  color: white;
+  font-weight: bold;
+}
+
+/* Estilo para la sección principal */
+main {
+  background-color: #cccccc;
+  padding: 20px;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para el pie de página */
+footer {
+  background-image: url("images/pattern.png");
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para el modal del juego */
+.modal-content {
+  background-color: #000000;
+  border: 5px solid white;
+  width: auto;
+}
+
+/* Estilo para el título del modal */
+.modal-title {
+  color: white;
+  font-family: Papyrus;
+  font-size: 24px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  display: flex !important;
+  justify-content: space-around;
+  flex-basis: auto;
+}
+
+.p-4 {
+  padding: 1rem!important;
+}
+
+.navbar-toggler {
+  background-color: rgb(82, 64, 85, .75) !important;
+}
+
+
+@media only screen and (max-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
-    display: flex!important;
-    justify-content: space-around;
-    flex-basis: auto;
-    }
+    display: none !important; 
+  }
+}
+
+@media only screen and (min-width: 992px) {
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+.navbar-expand-lg .navbar-toggler {
+  display: none !important; 
+}
+}

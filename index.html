@@ -24,20 +24,30 @@
 
 </head>
 
+<body>
 <!-- Crear un contenedor para el contenido del sitio web -->
 <div class="container">
   <!-- Crear un encabezado con el título del sitio web y una barra de navegación con botones -->
   <header class="py-3">
     <h1>La Sirena</h1>
     <h2>de Ray Bradbury</h2>
-    <p>Una aventura gráfica realizada por Julia Moirano y Joaquín Galasso, para Tecno 1.</p>
+    <p id=subtitle>Una aventura gráfica realizada por Julia Moirano y Joaquín Galasso, para Tecno 1.</p>
+
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="pos-f-t">
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="p-4">
+              <h4 class="text-white">Collapsed content</h4>
+              <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
+          </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -52,7 +62,6 @@
               <a class="nav-link" href="nuestro-proceso.html">Nuestro proceso</a>
             </li>
           </ul>
-        </div>
       </div>
     </nav>
   </header>
@@ -60,27 +69,23 @@
   <!-- Crear una sección principal con información sobre el juego -->
   <main class="py-3">
     <div class="column inline">
-      <div class="col-md-6">
-        <img src="sirena.jpg" alt="La Sirena" class="img-fluid">
-      </div>
-      <div class="col-md-6">
+        <img src="images/title.png" alt="La Sirena" class="img-fluid">
         <h2>¿De qué se trata el juego?</h2>
-        <p>El juego está basado en el relato "La Sirena" de Ray Bradbury, publicado en 1946. Es una historia sobre la
-          soledad y el paso del tiempo, donde una extraña criatura acude a un faro luego de oír su sirena. El juego te
-          invita a explorar el mundo de la sirena y a interactuar con ella y con el farero, mientras descubres los
+        <p>El juego está basado en el relato "La Sirena" de Ray Bradbury, publicado en 1951. <br> Es una historia sobre la
+          soledad y el paso del tiempo, <b>donde una extraña criatura acude a un faro luego de oír su sirena</b>. El juego te
+          invita a explorar el mundo de la sirena y a interactuar con ella y con el farero, mientras descubrís los
           secretos y las emociones que se esconden tras este encuentro.</p>
-        <p>El juego está hecho con p5.js, una biblioteca de JavaScript para la codificación creativa. El juego usa
-          gráficos, sonidos y animaciones para crear una experiencia inmersiva y artística. El juego tiene múltiples
-          finales posibles, dependiendo de las elecciones que hagas durante el juego.</p>
-        <p>¿Te animas a jugar? Haz clic en el botón "Jugar ahora" y sumérgete en el mundo de la sirena.</p>
-      </div>
+        <p>El juego está <b>hecho con p5.js, una biblioteca de JavaScript para la codificación creativa</b>. La misma tiene múltiples
+          finales posibles, dependiendo de las elecciones que hagas a medida que avanzás.</p>
+          <!--  <img src="images/monster.png" alt="La criatura" class="img-fluid" style="max-height: 150px; max-width: 150px"> -->
+        <p id="thick" type="button" data-toggle="modal" data-target="#exampleModalCenter">¿Te animás a jugar? Hacé clic acá y sumergite en el mundo de la sirena.</p>
     </div>
   </main>
   <!-- Crear un pie de página con información de contacto -->
   <footer class="py-3 bg-dark text-white">
-    <p class="text-center">Este sitio web fue creado por Joaco y Julia para el trabajo final de la materia Programación
-      Creativa.</p>
-    <p class="text-center">Puedes contactarnos por correo electrónico a joaco@gmail.com y julia@gmail.com.</p>
+    <span class="text-center">Esta página web fue creada por Julia y Joaco para el TP Final de la materia Tecno 1.</span>
+    <br>
+    <span class="text-center"><b>< Facultad de Artes, UNLP ></b></span>
   </footer>
 </div>
 
@@ -96,6 +101,7 @@
         </button>
       </div>
       <div class="modal-body canvas">
+        <div id='juego'></div>
           <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
           <script language="javascript" type="text/javascript" src="claseAventura.js"></script>
           <script language="javascript" type="text/javascript" src="claseBoton.js"></script>

@@ -8,6 +8,9 @@
 function setup() {
   createCanvas(800, 600);
   aventura = new Aventura();
+
+  let contenedor = createCanvas(800, 600);
+  contenedor.parent('juego');
 }
 
 function draw() {
