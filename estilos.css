@@ -150,7 +150,7 @@ footer {
   padding-left: 2.5rem;
 }
 
-.navbar-expand-lg .navbar-toggler {
+#oculto {
   display: none !important; 
 }
 }
