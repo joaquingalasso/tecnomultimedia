@@ -97,7 +97,6 @@ span {
 .card {
   font-weight: bold;
   color: rgb(90, 60, 90);
-  cursor: pointer;
 }
 
 .btn-primary {
@@ -214,6 +213,12 @@ footer {
   flex-basis: auto;
 }
 
+.icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+
 .navbar-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,6 +319,10 @@ footer {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .card-img-top {
+    width: 15rem;
   }
 
   .modal-title {
