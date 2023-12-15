@@ -289,7 +289,7 @@ footer {
 
 @media only screen and (min-width: 500px) and (max-width: 550px) {
   .modal {
-    padding-right: 2.5rem !important;
+    padding-left: 2rem !important;
   }
 
   .p5Canvas {
