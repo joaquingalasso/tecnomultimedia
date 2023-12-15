@@ -9,7 +9,7 @@
 
 body {
   /* background-image: linear-gradient(to right, #141e30, #243b55); */
-  background-image: url("images/background2.png");
+  background-image: url("images/background.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
   background-position: center;
@@ -47,7 +47,6 @@ body {
 */
 .container {
   max-width: 800px;
-  margin: 0 auto;
 }
 
 .canvas {
@@ -283,14 +282,14 @@ footer {
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (min-width: 500px) and (max-width: 550px) {
   .modal {
     padding-right: 2.5rem !important;
   }
 
   .p5Canvas {
-    width: 300px !important;
-    height: 200px !important;
+    width: 400px !important;
+    height: 300px !important;
   }
 }
 
@@ -317,9 +316,13 @@ footer {
     flex-wrap: wrap;
   }
 
+  .modal-title {
+    font-size: 20px;
+}
+
   .p5Canvas {
-    width: 400px !important;
-    height: 300px !important;
+    width: 300px !important;
+    height: 200px !important;
   }
 
   #margin-bottom75 {
