@@ -20,7 +20,7 @@ body {
   margin: auto;
   margin-top: 2rem;
 }
-
+/*
 #footer-img {
   width: 100%;
   position: relative;
@@ -44,7 +44,7 @@ body {
   margin-left: -300px;
   overflow: hidden;
 }
-
+*/
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -292,6 +292,12 @@ footer {
     width: 300px !important;
     height: 200px !important;
   }
+}
+
+@media only screen and (max-width: 695px) {
+.card {
+  margin-bottom: 1rem;
+}
 }
 
 @media only screen and (max-width: 500px) {
