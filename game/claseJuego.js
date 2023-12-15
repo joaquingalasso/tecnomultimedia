@@ -159,6 +159,31 @@ class Juego {
       this.estado = this.botonJuego.pulsiguiente;
       this.reiniciarVariables();
     }
+    if (this.estado === 1 || this.estado === 3 || this.estado === 5 || this.estado === 7) {
+      if (mouseX<width/2 && this.johnny1.perx>0) {
+        this.johnny1.moverIzquierda1();
+      } else if (mouseX>width/2) {
+        this.johnny1.moverDerecha1();
+      }
+      if (this.johnny1.perx > 850) {
+        this.estado = this.johnny1.persiguiente;
+        this.johnny2 = new personaje(750, 165, 100, 150);
+      }
+
+    } else if (this.estado === 2 || this.estado === 4 || this.estado === 6 || this.estado === 8) {
+      if (mouseX<width/2) {
+        this.johnny2.moverIzquierda2();
+      } else if (mouseX>width/2 && this.johnny2.perx<width) {
+        this.johnny2.moverDerecha2();
+      }
+      if (this.johnny2.perx < -50) {
+        this.estado = this.johnny2.persiguiente;
+        this.johnny1 = new personaje(50, 165, 100, 150);
+        if (this.estado === 9) {
+          this.victoria = true;
+        }
+      }
+    }
   }
 
   presionar(keyCode) {

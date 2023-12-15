@@ -31,10 +31,14 @@
     <div class="container">
         <!-- Crear un encabezado con el título del sitio web y una barra de navegación con botones -->
         <header class="py-3">
+            <div id="header-img">
+                <img id="bkg-img" src="images/header.png" />
+            </div>
+            <div id="margin-top1">
             <h1>La Sirena</h1>
             <h2>de Ray Bradbury</h2>
             <p id=subtitle>Una aventura gráfica realizada por Julia Moirano y Joaquín Galasso, para Tecno 1.</p>
-
+        </div>
 
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="pos-f-t">
@@ -87,13 +91,17 @@
         <main class="py-3">
             <div class="column inline">
                 <h2>¿Cómo lo creamos?</h2>
-                <p>El juego está basado en el relato "La Sirena" de Ray Bradbury, publicado en 1951. <br> Es una
-                    historia sobre la
-                    soledad y el paso del tiempo, <b>donde una extraña criatura acude a un faro luego de oír su
-                        sirena</b>. El juego te
-                    invita a explorar el mundo de la sirena y a interactuar con ella y con el farero, mientras descubrís
-                    los
-                    secretos y las emociones que se esconden tras este encuentro.</p>
+                <p>Para realizar este proyecto, seguimos una serie de pasos que nos ayudaron a organizar nuestro trabajo
+                    y a cumplir con los objetivos propuestos. <br> <br> En primer lugar, <b>hicimos un diagrama de flujo
+                        en
+                        Figjam</b>,
+                    una herramienta online que permite crear esquemas visuales de forma colaborativa. En el diagrama,
+                    <b>plasmamos las diferentes escenas del juego, las opciones que tendría el jugador y las
+                        consecuencias
+                        de sus elecciones</b>. Así, definimos la estructura y la lógica del juego, y nos aseguramos de
+                    que fuera
+                    coherente con el relato original.
+                </p>
 
                 <!-- Gallery 1 -->
                 <div class="row">
@@ -103,40 +111,50 @@
                 </div>
                 <!-- Gallery 1 -->
 
-                <p id="margin-top1">El juego está <b>hecho con p5.js, una biblioteca de JavaScript para la codificación creativa</b>. La
-                    misma tiene múltiples
-                    finales posibles, dependiendo de las elecciones que hagas a medida que avanzás.</p>
+                <p id="margin-top1">En segundo lugar, trabajamos en el arte del juego, es decir, las ilustraciones que
+                    acompañarían a la narrativa. Para ello, <b>Julia se basó en los sketches que habíamos hecho
+                        previamente</b>, donde había elegido una estética lúgubre, que tiende al gris oscuro, pero con
+                    acentos violáceos y amarillentos. Estos colores nos parecieron adecuados para <b>representar el
+                        ambiente sombrío y misterioso del relato</b>, así como los contrastes entre la realidad y la
+                    fantasía.
+                    <b>Se utilizó CLIP Studio para dibujar las imágenes y la tipografía Papyrus para narrarlas</b>.
+                </p>
 
                 <!-- Gallery 2 -->
                 <div class="row">
                     <div class="col-lg-4 mb-4 mb-lg-0">
-                        <img src="images/sketches/imagen (7).jpg" class="w-100 shadow-1-strong rounded mb-4"
+                        <img src="images/sketches/horizontales/imagen (7).jpg" class="w-100 shadow-1-strong rounded mb-4"
                             alt="Imagen 1" />
 
-                        <img src="images/sketches/imagen (2).jpg" class="w-100 shadow-1-strong rounded mb-4"
+                        <img src="images/sketches/horizontales/imagen (2).jpg" class="w-100 shadow-1-strong rounded mb-4"
                             alt="Imagen 2" />
                     </div>
 
                     <div class="col-lg-4 mb-4 mb-lg-0">
-                        <img src="images/sketches/imagen (10).jpg" class="w-100 shadow-1-strong rounded mb-4"
+                        <img src="images/sketches/horizontales/imagen (10).jpg" class="w-100 shadow-1-strong rounded mb-4"
                             alt="Imagen 3" />
 
-                        <img src="images/sketches/imagen (4).jpg" class="w-100 shadow-1-strong rounded mb-4"
+                        <img src="images/sketches/horizontales/imagen (4).jpg" class="w-100 shadow-1-strong rounded mb-4"
                             alt="Imagen 4" />
                     </div>
 
                     <div class="col-lg-4 mb-4 mb-lg-0">
-                        <img src="images/sketches/imagen (5).jpg" class="w-100 shadow-1-strong rounded mb-4"
+                        <img src="images/sketches/horizontales/imagen (5).jpg" class="w-100 shadow-1-strong rounded mb-4"
                             alt="Imagen 5" />
 
-                        <img src="images/sketches/imagen (6).jpg" class="w-100 shadow-1-strong rounded mb-4"
+                        <img src="images/sketches/horizontales/imagen (6).jpg" class="w-100 shadow-1-strong rounded mb-4"
                             alt="Imagen 6" />
                     </div>
                 </div>
                 <!-- Gallery 2-->
 
-                <p id="thick" id="margin-top1" type="button" data-toggle="modal" data-target="#exampleModalCenter">¿Te animás a jugar?
-                    Hacé clic acá y sumergite en el mundo de la sirena.</p>
+                <p id="margin-top1">En tercer lugar, <b>nos dedicamos a la programación del juego, utilizando JavaScript
+                        y la librería de P5.js</b>. Esta librería nos permitió crear gráficos interactivos de forma
+                    sencilla y eficiente, aprovechando las ventajas del lenguaje web. Juntos, escribimos el código,
+                    siguiendo el diagrama de flujo que habíamos hecho y usando las imágenes que Julia había creado. Así,
+                    <b>logramos integrar los elementos visuales y narrativos del juego, y darle la funcionalidad que
+                        queríamos</b>.
+                </p>
 
                 <!-- Gallery 3-->
                 <div class="row">
@@ -156,6 +174,18 @@
                     </div>
                 </div>
                 <!-- Gallery 3 -->
+                <p id="margin-top1">Por último, <b>creamos la página web que alojaría el juego, usando HTML, CSS,
+                        JavaScript y el framework Bootstrap</b>. Con HTML y CSS, diseñamos la estructura y el estilo de
+                    la
+                    página, siguiendo los principios de diseño web responsivo. Con JavaScript y Bootstrap, agregamos la
+                    interactividad y la dinámica de la página, usando elementos como botones, modales y galerías. Así,
+                    <b>conseguimos que la página fuera atractiva, accesible y fácil de navegar</b>.
+                </p>
+                <script src="https://gist.github.com/joaquingalasso/aa5092a2deb143bc88c696111f4b59a7.js"></script>
+                <div class="slot"></div>
+                <button type="button" class="btn btn-primary btn-confettis" onclick="ejecutarCodigo()">
+                    Ejecutar código
+                </button>
             </div>
         </main>
         <!-- Crear un pie de página con información de contacto -->
@@ -166,6 +196,9 @@
             <span class="text-center"><b>
                     < Facultad de Artes, UNLP>
                 </b></span>
+            <div id="footer-img">
+                <img id="bkg-img" src="images/footer.png" />
+            </div>
         </footer>
     </div>
 
@@ -197,7 +230,9 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="main.js"></script>
+    
     <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

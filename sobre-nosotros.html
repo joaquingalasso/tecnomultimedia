@@ -27,16 +27,21 @@
 </head>
 
 <body>
-<!-- Crear un contenedor para el contenido del sitio web -->
-<div class="container">
-  <!-- Crear un encabezado con el título del sitio web y una barra de navegación con botones -->
-  <header class="py-3">
-    <h1>La Sirena</h1>
-    <h2>de Ray Bradbury</h2>
-    <p id=subtitle>Una aventura gráfica realizada por Julia Moirano y Joaquín Galasso, para Tecno 1.</p>
+  <!-- Crear un contenedor para el contenido del sitio web -->
+  <div class="container">
+    <!-- Crear un encabezado con el título del sitio web y una barra de navegación con botones -->
+    <header class="py-3">
+      <div id="header-img">
+        <img id="bkg-img" src="images/header.png" />
+      </div>
+      <div id="margin-top1">
+        <h1>La Sirena</h1>
+        <h2>de Ray Bradbury</h2>
+        <p id=subtitle>Una aventura gráfica realizada por Julia Moirano y Joaquín Galasso, para Tecno 1.</p>
+      </div>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="pos-f-t">
           <div class="collapse" id="navbarToggleExternalContent">
             <div class="p-4" id="oculto">
@@ -56,7 +61,9 @@
             </div>
           </div>
           <nav class="navbar navbar-dark bg-dark" id="oculto">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+              aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           </nav>
@@ -64,7 +71,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Volver al inicio</a>
+              <a class="nav-link" href="index.html">Volver al inicio</a>
             </li>
             <li class="nav-item">
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -75,45 +82,100 @@
               <a class="nav-link" href="nuestro-proceso.html">Nuestro proceso</a>
             </li>
           </ul>
-      </div>
-    </nav>
-  </header>
+        </div>
+      </nav>
+    </header>
 
-  <!-- Crear una sección principal con información sobre el juego -->
-  <main class="py-3">
-    <div class="column inline">
+    <!-- Crear una sección principal con información sobre el juego -->
+    <main class="py-3">
+      <div class="column inline">
         <h2>¿Quiénes somos?</h2>
-        <p>El juego está basado en el relato "La Sirena" de Ray Bradbury, publicado en 1951. <br> Es una historia sobre la
-          soledad y el paso del tiempo, <b>donde una extraña criatura acude a un faro luego de oír su sirena</b>. El juego te
-          invita a explorar el mundo de la sirena y a interactuar con ella y con el farero, mientras descubrís los
-          secretos y las emociones que se esconden tras este encuentro.</p>
-        <p id="margin-top1">El juego está <b>hecho con p5.js, una biblioteca de JavaScript para la codificación creativa</b>. La misma tiene múltiples
-          finales posibles, dependiendo de las elecciones que hagas a medida que avanzás.</p>
-          <!--  <img src="images/monster.png" alt="La criatura" class="img-fluid" style="max-height: 150px; max-width: 150px"> -->
-        <p id="thick" id="margin-top1" type="button" data-toggle="modal" data-target="#exampleModalCenter">¿Te animás a jugar? Hacé clic acá y sumergite en el mundo de la sirena.</p>
-    </div>
-  </main>
-  <!-- Crear un pie de página con información de contacto -->
-  <footer class="py-3 bg-dark text-white">
-    <span class="text-center">Esta página web fue creada por Julia y Joaco para el TP Final de la materia Tecno 1.</span>
-    <br>
-    <span class="text-center"><b>< Facultad de Artes, UNLP ></b></span>
-  </footer>
-</div>
-
-<!-- Crear un modal para mostrar el juego de p5.js -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCentered"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Aventura gráfica: "La Sirena"</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <p>Somos Julia y Joaco, dos <b>estudiantes universitarios del primer año de la carrera de Diseño Multimedial de
+            la
+            Facultad de Artes (UNLP)</b>. Nos apasiona la narrativa interactiva y la expresión artística a través de los
+          medios digitales. En este proyecto, quisimos crear una Aventura gráfica que adapta el relato “La Sirena”, de
+          Ray Bradbury, uno de nuestros autores favoritos de ciencia ficción.</p>
+        <div class="row">
+          <!-- Esta es la columna que ajusta el tamaño de la primera tarjeta -->
+          <div class="col">
+            <!-- Esta es la primera tarjeta -->
+            <div class="card">
+              <!-- Esta es la foto de la primera tarjeta -->
+              <img src="images/foto_juli.jpg" class="card-img-top" alt="Foto de Julia">
+              <!-- Este es el contenido de la primera tarjeta -->
+              <div class="card-body">
+                <!-- Este es el título de la primera tarjeta -->
+                <h5 class="card-title">Julia Moirano</h5>
+                <!-- Este es el texto de la primera tarjeta -->
+                <p class="card-text">
+                  <b>N° de legajo:</b> 94719/0 <br>
+                  <b>Edad:</b> 19 años <br>
+                  <b>Hobbies:</b> dibujar, pintar, animar. <br><br>
+                  Ha desarrollado un estilo propio que combina elementos fantásticos y realistas. Le gusta experimentar con diferentes
+                  técnicas y herramientas, y en este caso utilizó CLIP Studio.
+                </p>
+                <!-- Este es el ícono de la red social de la primera tarjeta -->
+                <a href="https://github.com/juliamoirano" class="card-link">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Esta es la columna que ajusta el tamaño de la segunda tarjeta -->
+          <div class="col">
+            <!-- Esta es la segunda tarjeta -->
+            <div class="card">
+              <!-- Esta es la foto de la segunda tarjeta -->
+              <img src="images/foto_joa.png" class="card-img-top" alt="Foto de Joaquín">
+              <!-- Este es el contenido de la segunda tarjeta -->
+              <div class="card-body">
+                <!-- Este es el título de la segunda tarjeta -->
+                <h5 class="card-title">Joaquín Galasso</h5>
+                <!-- Este es el texto de la segunda tarjeta -->
+                <p class="card-text">
+                  <b>N° de legajo:</b> 94698/3 <br>
+                  <b>Edad:</b> 20 años <br>
+                  <b>Hobbies:</b> programar, cocinar, tkdo. <br><br>
+                  Tiene una formación previa en Informática, lo que le facilitó
+                  el aprendizaje de JavaScript y la librería de P5.js. Le apasiona todo lo que refiere a la ciencia y la tecnología.
+                </p>
+                <!-- Este es el ícono de la red social de la segunda tarjeta -->
+                <a href="https://github.com/joaquingalasso" class="card-link">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body canvas">
-        <div id='juego'></div>
+    </main>
+    <!-- Crear un pie de página con información de contacto -->
+    <footer class="py-3 bg-dark text-white">
+      <span class="text-center">Esta página web fue creada por Julia y Joaco para el TP Final de la materia Tecno
+        1.</span>
+      <br>
+      <span class="text-center"><b>
+          < Facultad de Artes, UNLP>
+        </b></span>
+      <div id="footer-img">
+        <img id="bkg-img" src="images/footer.png" />
+      </div>
+    </footer>
+  </div>
+
+  <!-- Crear un modal para mostrar el juego de p5.js -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCentered"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Aventura gráfica: "La Sirena"</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body canvas">
+          <div id='juego'></div>
           <script language="javascript" type="text/javascript" src="game/libraries/p5.min.js"></script>
           <script language="javascript" type="text/javascript" src="game/claseAventura.js"></script>
           <script language="javascript" type="text/javascript" src="game/claseBoton.js"></script>
@@ -122,21 +184,24 @@
           <script language="javascript" type="text/javascript" src="game/clasePiedras.js"></script>
           <script language="javascript" type="text/javascript" src="game/claseTexto.js"></script>
           <script language="javascript" type="text/javascript" src="game/tpfinal.js"></script>
+        </div>
+
       </div>
-      
     </div>
   </div>
-</div>
 
-<!-- JavaScript -->
-<script src="main.js"></script>
-<!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+  <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
