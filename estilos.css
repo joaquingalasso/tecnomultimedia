@@ -113,7 +113,7 @@ footer {
 }
 
 #margin-top1 {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 
@@ -146,6 +146,10 @@ footer {
   font-family: Papyrus;
   font-size: 24px;
   text-align: center;
+}
+
+.modal {
+  padding-right: 20rem !important;
 }
 
 .navbar-expand-lg .navbar-collapse {
@@ -211,6 +215,15 @@ footer {
   .nav-item {
     margin-right: 1rem;
   }
+
+  .p5Canvas {
+    width: 500px !important;
+    height: 400px !important;
+}
+
+.modal {
+  padding-right: 5rem !important;
+}
 }
 
 @media only screen and (max-width: 500px) {
@@ -229,6 +242,11 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  .p5Canvas {
+    width: 400px !important;
+    height: 300px !important;
+}
 
   #margin-bottom75 {
     margin-bottom: .75rem;
