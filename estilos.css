@@ -4,15 +4,15 @@
 * {
   font-family: 'Papyrus', fantasy;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 15px !important;
 }
 
 body {
- /* background-image: linear-gradient(to right, #141e30, #243b55); */
- background-image: url("images/background.png");
- background-repeat: repeat;
- background-attachment: fixed;
- background-position: center;
+  /* background-image: linear-gradient(to right, #141e30, #243b55); */
+  background-image: url("images/background.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .container {
@@ -21,7 +21,6 @@ body {
 }
 
 .canvas {
-  border: 2px solid rgb(0, 0, 0);
   /* position:absolute;
     top:0;
     left:0;
@@ -51,7 +50,7 @@ span {
 
 #subtitle {
   font-size: 16px;
-  color: rgba(255,255,255,.75);
+  color: rgba(255, 255, 255, .75);
 }
 
 #thick {
@@ -71,7 +70,11 @@ span {
   border-color: rgb(90, 60, 90);
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
   background-color: rgb(90, 60, 90);
   border-color: rgb(125, 125, 175);
 }
@@ -109,18 +112,40 @@ footer {
   margin-bottom: 1rem;
 }
 
+#margin-top1 {
+  margin-top: 1rem;
+}
+
+
 /* Estilo para el modal del juego */
 .modal-content {
-  background-color: #000000;
-  border: 5px solid white;
+  background-color: rgb(23, 29, 35, 25);
+  border: 0px solid rgba(255, 255, 255, .75);
   width: auto;
+}
+
+.modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .75);
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
 }
 
 /* Estilo para el título del modal */
 .modal-title {
-  color: white;
+  color: rgba(255, 255, 255, .75);
   font-family: Papyrus;
   font-size: 24px;
+  text-align: center;
 }
 
 .navbar-expand-lg .navbar-collapse {
@@ -163,6 +188,10 @@ footer {
   flex-direction: column;
 }
 
+.row {
+  justify-content: center;
+}
+
 @media only screen and (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 2.5rem;
@@ -170,14 +199,15 @@ footer {
   }
 
   #oculto {
-    display: none !important; 
+    display: none !important;
   }
 }
 
 @media only screen and (max-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
-    display: none !important; 
+    display: none !important;
   }
+
   .nav-item {
     margin-right: 1rem;
   }
@@ -198,13 +228,13 @@ footer {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-}
+  }
 
-#margin-bottom75 {
-  margin-bottom: .75rem;
-}
+  #margin-bottom75 {
+    margin-bottom: .75rem;
+  }
 
-#margin-bottom1 {
-  margin-bottom: 1rem;
-}
+  #margin-bottom1 {
+    margin-bottom: 1rem;
+  }
 }
