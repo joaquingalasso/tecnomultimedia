@@ -2,7 +2,6 @@
 
 /* Aplicar Papyrus a todo el documento */
 * {
-  font-family: 'Papyrus', fantasy;
   text-align: center;
   border-radius: 15px !important;
 }
