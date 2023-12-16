@@ -265,7 +265,6 @@ footer {
 
 @media only screen and (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 2.5rem;
     padding-left: 2.5rem;
   }
 
@@ -294,9 +293,6 @@ footer {
 }
 
 @media only screen and (min-width: 500px) and (max-width: 550px) {
-  .modal {
-    padding-left: 2rem !important;
-  }
 
   .p5Canvas {
     width: 400px !important;
@@ -310,7 +306,26 @@ footer {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .modal-dialog-centered {
+    min-height: calc(100% - (1.75rem * 2));
+    justify-content: center;
+  }
+
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+  .modal {
+    padding-right: 0rem !important;
+  }
+}
+
 @media only screen and (max-width: 500px) {
+  .modal {
+    padding-right: 0 !important;
+  }
+
   .navbar-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -336,9 +351,13 @@ footer {
   }
 
   .p5Canvas {
-    width: 300px !important;
-    height: 200px !important;
+    width: 350px !important;
+    height: 250px !important;
   }
+
+  .modal-body {
+    padding: 0.75rem;
+}
 
   #margin-bottom75 {
     margin-bottom: .75rem;
