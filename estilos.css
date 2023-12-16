@@ -20,8 +20,9 @@ body {
   margin: auto;
   margin-top: 2rem;
 }
-/*
+
 #footer-img {
+  background-image: url("images/footer.png");
   width: 100%;
   position: relative;
   bottom: 100px;
@@ -38,13 +39,14 @@ body {
 }
 
 #header-img {
+  background-image: url("images/header.png");
   width: 100%;
   position: relative;
   top: -20px;
   margin-left: -300px;
   overflow: hidden;
 }
-*/
+
 .container {
   max-width: 800px;
 }
