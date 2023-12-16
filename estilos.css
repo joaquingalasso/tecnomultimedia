@@ -23,11 +23,12 @@ body {
 
 #footer-img {
   background-image: url("images/footer.png");
-  width: 100%;
-  position: relative;
-  bottom: 100px;
-  margin-left: -300px;
-  overflow:hidden;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 150px;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 #bkg-img {
@@ -35,16 +36,17 @@ body {
   display: block;
   float: left;
   z-index: -1;
-  
+
 }
 
 #header-img {
   background-image: url("images/header.png");
-  width: 100%;
-  position: relative;
-  top: -20px;
-  margin-left: -300px;
-  overflow: hidden;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .container {
@@ -118,12 +120,14 @@ span {
 
 .btn-confettis:active {
   margin-top: 0px;
-  box-shadow: 0 0px 0 rgb(160,160,160);
+  box-shadow: 0 0px 0 rgb(160, 160, 160);
 }
+
 .slot {
   position: relative;
   perspective: 500px;
 }
+
 .slot div {
   width: 35px;
   height: 35px;
@@ -301,9 +305,9 @@ footer {
 }
 
 @media only screen and (max-width: 695px) {
-.card {
-  margin-bottom: 1rem;
-}
+  .card {
+    margin-bottom: 1rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -329,7 +333,7 @@ footer {
 
   .modal-title {
     font-size: 20px;
-}
+  }
 
   .p5Canvas {
     width: 300px !important;
