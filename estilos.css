@@ -6,6 +6,16 @@
   border-radius: 15px !important;
 }
 
+@font-face {
+  font-family: "Papyrus";
+  src: url(data/Papyrus.ttf) format("truetype");
+}
+
+/* Aplicar Papyrus a todo el documento */
+* {
+  font-family: 'Papyrus', fantasy;
+}
+
 body {
   /* background-image: linear-gradient(to right, #141e30, #243b55); */
   background-image: url("images/background.jpg");
@@ -316,6 +326,7 @@ footer {
     max-width: 500px;
     margin: 1.75rem auto;
   }
+
   .modal {
     padding-right: 0rem !important;
   }
@@ -357,7 +368,7 @@ footer {
 
   .modal-body {
     padding: 0.75rem;
-}
+  }
 
   #margin-bottom75 {
     margin-bottom: .75rem;
